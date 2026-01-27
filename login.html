@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | London Octave</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--color-dark);
+            color: var(--color-light);
+        }
+
+        .login-box {
+            max-width: 400px;
+            width: 100%;
+            padding: var(--spacing-md);
+            text-align: center;
+        }
+
+        .login-box h2 {
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .error-msg {
+            color: #ff4d4d;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-box glass" style="border-radius: 8px;">
+        <h2 class="text-premium">Access Protected</h2>
+        <p>Please enter the password to view the site.</p>
+        <form id="login-form" style="margin-top: 1.5rem;">
+            <div class="form-group" style="margin-bottom: 1.5rem;">
+                <input type="password" id="password-input" required placeholder="Enter Password"
+                    style="text-align: center;">
+            </div>
+            <button type="submit" class="btn w-100" style="width: 100%;">Enter Site</button>
+            <p id="error-msg" class="error-msg">Incorrect password. Please try again.</p>
+        </form>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script>
+        document.getElementById('login-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const input = document.getElementById('password-input').value;
+            const success = window.verifyPassword(input);
+            if (!success) {
+                document.getElementById('error-msg').style.display = 'block';
+            }
+        });
+    </script>
+</body>
+
+</html>
