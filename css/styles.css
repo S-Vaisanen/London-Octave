@@ -672,6 +672,8 @@ img {
     width: min(330px, 100%);
     margin: var(--spacing-sm) auto 0;
     touch-action: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .captcha-tile {
@@ -687,6 +689,9 @@ img {
     transition: var(--transition-fast);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -webkit-touch-callout: none;
 }
 
 .captcha-tile.is-dragging {
