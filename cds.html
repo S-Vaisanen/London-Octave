@@ -35,6 +35,10 @@
             <div class="header-cta">
                 <a href="concerts.html" class="btn btn-sm">Tickets</a>
             </div>
+            <button class="menu-toggle" aria-label="Toggle Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
         </div>
     </header>
 
@@ -47,57 +51,18 @@
                     masterpieces.</p>
             </div>
 
-            <div class="cds-container">
-                <!-- CD 1 -->
-                <article class="cd-entry">
-                    <div class="cd-header">
-                        <span class="text-premium">Orchestral Collection</span>
-                        <h3>American Serenades</h3>
-                    </div>
-                    <div class="cd-body">
-                        <p class="cd-description">A vibrant collection of works by American composers, showcasing the
-                            orchestra's versatility beyond the baroque era. Featuring works by Barber, Copland and
-                            Diamond.</p>
-                        <div class="cd-footer">
-                            <a href="contact.html" class="btn btn-sm btn-outline">Enquire for Copy</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- CD 2 -->
-                <article class="cd-entry">
-                    <div class="cd-header">
-                        <span class="text-premium">Baroque Masters</span>
-                        <h3>Better Baroque</h3>
-                    </div>
-                    <div class="cd-body">
-                        <p class="cd-description">Featuring virtuosic performances of favorites by Vivaldi, Handel, and
-                            Telemann. Recorded in the stunning acoustic of St. Martin-in-the-Fields, this album captures
-                            the energy and intimacy of our live performances.</p>
-                        <div class="cd-footer">
-                            <a href="contact.html" class="btn btn-sm btn-outline">Enquire for Copy</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- CD 3 -->
-                <article class="cd-entry">
-                    <div class="cd-header">
-                        <span class="text-premium">Chamber Music</span>
-                        <h3>Bach: The Art of Fugue</h3>
-                    </div>
-                    <div class="cd-body">
-                        <p class="cd-description">A profound and meticulous recording of Bach's monumental work,
-                            arranged and performed with exceptional clarity. A definitive statement on one of the
-                            greatest achievements in Western music.</p>
-                        <div class="cd-footer">
-                            <a href="contact.html" class="btn btn-sm btn-outline">Enquire for Copy</a>
-                        </div>
-                    </div>
-                </article>
+            <div id="cds-container" class="cds-container">
+                <!-- Data will be loaded dynamically -->
+                <div class="text-center">Loading recordings...</div>
+            </div>
+            <div class="text-center mt-lg">
+                <p class="text-muted">CDs are available at concerts or on special order.</p>
             </div>
         </section>
     </main>
+
+    <script src="js/cds_data.js"></script>
+    <script src="js/cds.js"></script>
 
     <footer class="footer">
         <div class="container footer-grid">

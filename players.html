@@ -35,6 +35,10 @@
             <div class="header-cta">
                 <a href="concerts.html" class="btn btn-sm">Tickets</a>
             </div>
+            <button class="menu-toggle" aria-label="Toggle Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
         </div>
     </header>
 
@@ -47,71 +51,10 @@
                     whom hold principal positions in London's major orchestras.</p>
             </div>
 
-            <div class="players-grid">
-                <!-- Lorraine McAslan -->
-                <article class="player-card">
-                    <div class="player-img">
-                        <img src="assets/Lorraine_McAslan.webp" alt="Lorraine McAslan">
-                    </div>
-                    <div class="player-info">
-                        <h3>LORRAINE McASLAN</h3>
-                        <span class="player-role text-premium">leader, violin</span>
-                        <p>Initially trained in London with David Martin, Lorraine McAslan moved to New York to study
-                            with Dorothy DeLay. She has since established herself as one of Britain's leading
-                            violinists, appearing as soloist with many of the world's major orchestras.</p>
-                    </div>
-                </article>
-
-                <!-- Norbert Blume -->
-                <article class="player-card">
-                    <div class="player-img">
-                        <img src="assets/Norbert_Blume.webp" alt="Norbert Blume">
-                    </div>
-                    <div class="player-info">
-                        <h3>NORBERT BLUME</h3>
-                        <span class="player-role text-premium">viola</span>
-                        <p>Norbert Blume has been Principal Viola with the BBC Symphony Orchestra for over 20 years. He
-                            is a highly respected chamber musician and teacher.</p>
-                    </div>
-                </article>
-
-                <!-- Dietrich Bethge -->
-                <article class="player-card">
-                    <div class="player-img">
-                        <img src="assets/Dietrich_Bethge.webp" alt="Dietrich Bethge">
-                    </div>
-                    <div class="player-info">
-                        <h3>DIETRICH BETHGE</h3>
-                        <span class="player-role text-premium">director, cello</span>
-                        <p>Founder and artistic director of London Octave, Dietrich Bethge has directed the ensemble
-                            from the cello in countless successful performances and recordings.</p>
-                    </div>
-                </article>
-
-                <!-- Chris West -->
-                <article class="player-card">
-                    <div class="player-img">
-                        <img src="assets/Chris_West.webp" alt="Chris West">
-                    </div>
-                    <div class="player-info">
-                        <h3>CHRIS WEST</h3>
-                        <span class="player-role text-premium">double bass</span>
-                        <p>Chris West is a prominent double bassist in the London music scene, known for his versatile
-                            playing in both orchestral and chamber settings.</p>
-                    </div>
-                </article>
-
-                <!-- Christopher Bevan -->
-                <article class="player-card">
-                    <div class="player-img">
-                        <img src="assets/Christopher_Bevan.webp" alt="Christopher Bevan">
-                    </div>
-                    <h3>CHRISTOPHER BEVAN</h3>
-                    <span class="player-role text-premium">harpsichord, piano</span>
-                    <p>Christopher Bevan is an accomplished keyboardist, specializing in period performance practice
-                        on harpsichord and fortepiano.</p>
+            <!-- Players Container -->
+            <div id="players-container" class="players-grid">
+                <!-- Players will be loaded here dynamically -->
             </div>
-            </article>
             </div>
         </section>
     </main>
@@ -147,6 +90,8 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="js/players_data.js"></script>
+    <script src="js/players.js"></script>
 </body>
 
 </html>

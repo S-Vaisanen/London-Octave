@@ -35,6 +35,10 @@
             <div class="header-cta">
                 <a href="concerts.html" class="btn btn-sm">Tickets</a>
             </div>
+            <button class="menu-toggle" aria-label="Toggle Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
         </div>
     </header>
 
@@ -48,7 +52,7 @@
             </div>
 
             <div class="contact-container">
-                <form id="contact-form" class="contact-form glass"
+                <form id="contact-form" class="contact-form glass" action="https://formspree.io/f/mreknlop" method="POST"
                     style="padding: var(--spacing-md); border-radius: 8px;">
                     <div class="form-group">
                         <label for="name">Full Name</label>
@@ -66,7 +70,19 @@
                         <label for="message">Your Message</label>
                         <textarea id="message" name="message" required placeholder="How can we help you?"></textarea>
                     </div>
-                    <button type="submit" class="btn w-100" style="width: 100%;">Send Message</button>
+                    <div class="form-group captcha-panel" aria-labelledby="captcha-title">
+                        <div class="captcha-header">
+                            <span class="text-premium">Verification</span>
+                            <h3 id="captcha-title" class="captcha-title">Arrange the tiles 1 to 9</h3>
+                            <p class="captcha-instructions">Drag a tile onto another to swap them. Arrange the
+                                numbers in order from 1 to 9, left to right and top to bottom.</p>
+                        </div>
+                        <div id="captcha-grid" class="captcha-grid" role="grid"
+                            aria-label="Captcha puzzle grid"></div>
+                        <p id="captcha-status" class="captcha-status" aria-live="polite">Captcha not solved.</p>
+                    </div>
+                    <button type="submit" id="contact-submit" class="btn w-100" style="width: 100%;" disabled>Send
+                        Message</button>
                 </form>
 
                 <div class="contact-info text-center mt-lg" style="margin-top: var(--spacing-lg);">
@@ -112,6 +128,7 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="js/captcha.js"></script>
 </body>
 
 </html>
